@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أدهم باشا - مرشح رئاسة مجلس الطلاب</title>
+<meta name="description" content="حملة أدهم باشا لرئاسة مجلس الطلاب - الاستماع، دراسة الاقتراح، والمتابعة.">
+<meta name="theme-color" content="#0f1419">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗳️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+    /* ============================================
+       CSS VARIABLES & THEME
+       ============================================ */
+    :root {
+        --navy: #0f1419;
+        --navy-2: #16202a;
+        --navy-3: #1e2d3d;
+        --off-white: #f8f7f5;
+        --surface: #ffffff;
+        --gold: #c9a961;
+        --gold-light: #ddc389;
+        --gold-dark: #a9834a;
+        --text-dark: #14181d;
+        --text-light: #666d74;
+        --border-light: #e9e6e0;
+        --shadow-sm: 0 2px 8px rgba(15, 20, 25, 0.06);
+        --shadow-md: 0 12px 32px rgba(15, 20, 25, 0.10);
+        --shadow-lg: 0 24px 60px rgba(15, 20, 25, 0.16);
+        --radius-sm: 0.6rem;
+        --radius-md: 1rem;
+        --radius-lg: 1.5rem;
+        --ease: cubic-bezier(0.23, 1, 0.32, 1);
+        --transition: all 0.35s var(--ease);
+        --sans: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-left: env(safe-area-inset-left, 0px);
+        --safe-right: env(safe-area-inset-right, 0px);
+        --nav-h: 4.25rem;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        scroll-padding-top: calc(var(--nav-h) + var(--safe-top));
+    }
+
+    body {
+        font-family: var(--sans);
+        background-color: var(--off-white);
+        color: var(--text-dark);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100%;
+        padding-left: var(--safe-left);
+        padding-right: var(--safe-right);
+    }
+
+    img, svg { max-width: 100%; display: block; }
+
+    a { color: inherit; }
+
+    button {
+        font-family: var(--sans);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    ::selection { background: var(--gold); color: var(--navy); }
+
+    :focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+
+    .skip-link {
+        position: absolute;
+        top: -100%;
+        right: 1rem;
+        background: var(--gold);
+        color: var(--navy);
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--radius-sm);
+        font-weight: 700;
+        z-index: 1000;
+        transition: top 0.2s var(--ease);
+    }
+    .skip-link:focus { top: calc(1rem + var(--safe-top)); }
+
+    /* Respect reduced-motion */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    h1, h2, h3, h4 { font-family: var(--sans); }
+
+    h1 {
+        font-size: clamp(2.2rem, 9vw, 4.2rem);
+        font-weight: 800;
+        line-height: 1.12;
+        margin-bottom: 1rem;
+        color: var(--navy);
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        font-size: clamp(1.7rem, 5.5vw, 2.6rem);
+        font-weight: 800;
+        line-height: 1.22;
+        margin-bottom: 1.25rem;
+        color: var(--navy);
+        letter-spacing: -0.01em;
+    }
+
+    h3 {
+        font-size: clamp(1.15rem, 4vw, 1.5rem);
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--navy);
+    }
+
+    p {
+        font-size: clamp(0.98rem, 2vw, 1.08rem);
+        color: var(--text-light);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+        max-width: 68ch;
+    }
+
+    strong { color: var(--navy); font-weight: 700; }
+
+    .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--gold-dark);
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+    .eyebrow::before {
+        content: '';
+        width: 1.5rem;
+        height: 2px;
+        background: var(--gold);
+        display: inline-block;
+    }
+
+    .section-head {
+        max-width: 640px;
+        margin: 0 auto 3rem;
+        text-align: center;
+    }
+    .section-head p { margin-left: auto; margin-right: auto; }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+        width: 100%;
+    }
+
+    section { padding: clamp(3.5rem, 9vh, 7rem) 0; position: relative; }
+
+    @media (max-width: 640px) {
+        section { padding: clamp(3rem, 8vh, 4rem) 0; }
+        .container { padding: 0 1.1rem; }
+    }
+
+    .alt-bg { background: var(--surface); }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.95rem 1.9rem;
+        background: var(--gold);
+        color: var(--navy);
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 0.7rem;
+        border: 2px solid var(--gold);
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4;
+        white-space: nowrap;
+        min-height: 48px;
+        touch-action: manipulation;
+        will-change: transform;
+    }
+
+    .btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn:active { transform: translateY(0) scale(0.97); }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--off-white);
+        border-color: rgba(248, 247, 245, 0.35);
+    }
+    .btn-secondary:hover { background: rgba(248, 247, 245, 0.1); border-color: var(--off-white); color: var(--off-white); }
+
+    .btn-large { padding: 1.1rem 2.2rem; font-size: 1.05rem; }
+
+    @media (max-width: 480px) {
+        .btn { width: 100%; }
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: var(--nav-h);
+        padding-top: var(--safe-top);
+        background: rgba(15, 20, 25, 0.85);
+        backdrop-filter: blur(14px) saturate(1.4);
+        -webkit-backdrop-filter: blur(14px) saturate(1.4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: max(1.25rem, var(--safe-right));
+        padding-left: max(1.25rem, var(--safe-right));
+        z-index: 200;
+        border-bottom: 1px solid rgba(201, 169, 97, 0.14);
+        transition: background 0.3s var(--ease);
+    }
+
+    nav .logo {
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: var(--gold);
+        text-decoration: none;
+        z-index: 210;
+    }
+
+    nav .nav-links {
+        display: flex;
+        gap: 2.2rem;
+        list-style: none;
+        align-items: center;
+    }
+
+    nav .nav-links a {
+        color: var(--off-white);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: var(--transition);
+        cursor: pointer;
+        position: relative;
+        padding: 0.35rem 0;
+    }
+
+    nav .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gold);
+        transition: width 0.3s var(--ease);
+    }
+
+    nav .nav-links a:hover,
+    nav .nav-links a.active { color: var(--gold); }
+    nav .nav-links a:hover::after,
+    nav .nav-links a.active::after { width: 100%; }
+
+    nav .nav-cta {
+        background: var(--gold);
+        color: var(--navy);
+        padding: 0.55rem 1.25rem;
+        border-radius: 0.55rem;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+    nav .nav-cta:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 210;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        touch-action: manipulation;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--off-white);
+        border-radius: 2px;
+        transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(160deg, var(--navy) 0%, var(--navy-3) 100%);
+        z-index: 190;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mobile-menu a {
+        color: var(--off-white);
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .btn { margin-top: 1rem; }
+
+    @media (max-width: 860px) {
+        nav .nav-links, nav .nav-cta { display: none; }
+        .menu-toggle { display: flex; }
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(150deg, var(--navy) 0%, var(--navy-3) 60%, #24384a 100%);
+        color: var(--off-white);
+        padding-top: calc(var(--nav-h) + var(--safe-top) + 1.5rem);
+        padding-bottom: 3rem;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .hero-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.35;
+        z-index: -1;
+        will-change: transform;
+        animation: float 16s ease-in-out infinite;
+    }
+    .hero-orb.o1 { width: 40vmax; height: 40vmax; background: radial-gradient(circle, var(--gold) 0%, transparent 70%); top: -15%; right: -10%; }
+    .hero-orb.o2 { width: 30vmax; height: 30vmax; background: radial-gradient(circle, #3d5a75 0%, transparent 70%); bottom: -20%; left: -10%; animation-duration: 20s; animation-delay: -4s; }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-3%, 4%) scale(1.08); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .hero-orb { animation: none; }
+    }
+
+    .hero .container { text-align: center; max-width: 920px; }
+
+    .hero .subtitle {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        color: var(--gold);
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.03em;
+        opacity: 0;
+        animation: fadeInUp 0.7s var(--ease) 0.05s forwards;
+    }
+
+    .hero h1 {
+        color: var(--off-white);
+        margin-bottom: 1rem;
+        opacity: 0;
+        animation: fadeInUp 0.7s var(--ease) 0.15s forwards;
+    }
+
+    .hero .supporting-text {
+        font-size: clamp(1.05rem, 3.4vw, 1.45rem);
+        font-weight: 600;
+        color: var(--off-white);
+        margin-bottom: 1.75rem;
+        line-height: 1.5;
+        opacity: 0;
+        animation: fadeInUp 0.7s var(--ease) 0.28s forwards;
+    }
+
+    .hero .description {
+        color: rgba(248, 247, 245, 0.82);
+        margin: 0 auto 2.5rem;
+        max-width: 600px;
+        opacity: 0;
+        animation: fadeInUp 0.7s var(--ease) 0.4s forwards;
+    }
+
+    .hero .cta-buttons {
+        display: flex;
+        gap: 1.1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        opacity: 0;
+        animation: fadeInUp 0.7s var(--ease) 0.52s forwards;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .hero .subtitle, .hero h1, .hero .supporting-text, .hero .description, .hero .cta-buttons {
+            opacity: 1; animation: none;
+        }
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: calc(1.5rem + var(--safe-bottom));
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        animation: bounce 2.2s infinite;
+        color: rgba(248, 247, 245, 0.6);
+    }
+    .scroll-indicator svg { width: 22px; height: 22px; stroke: var(--gold); stroke-width: 2; fill: none; }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+        40% { transform: translateX(-50%) translateY(-8px); }
+        60% { transform: translateX(-50%) translateY(-4px); }
+    }
+
+    @media (max-width: 640px) {
+        .hero { padding-bottom: 4rem; }
+        .hero .cta-buttons { flex-direction: column; width: 100%; gap: 0.85rem; }
+    }
+
+    /* ============================================
+       REVEAL ON SCROLL
+       ============================================ */
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .reveal-group.active > * { opacity: 1; transform: translateY(0); }
+    .reveal-group > * {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    }
+    .reveal-group.active > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal-group.active > *:nth-child(2) { transition-delay: 0.15s; }
+    .reveal-group.active > *:nth-child(3) { transition-delay: 0.25s; }
+    .reveal-group.active > *:nth-child(4) { transition-delay: 0.35s; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .reveal, .reveal-group > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+
+    /* ============================================
+       ABOUT
+       ============================================ */
+    .about .content { max-width: 720px; margin: 0 auto; text-align: center; }
+    .about p { margin: 0 auto 1.4rem; }
+    .about .highlight {
+        padding: 1.75rem 2rem;
+        background: linear-gradient(135deg, rgba(201, 169, 97, 0.09), rgba(201, 169, 97, 0.03));
+        border-right: 4px solid var(--gold);
+        border-radius: var(--radius-md);
+        margin-top: 1.5rem;
+        text-align: right;
+    }
+    .about .highlight strong { font-size: 1.05rem; }
+
+    /* ============================================
+       PILLARS
+       ============================================ */
+    .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.75rem;
+        margin-top: 1rem;
+    }
+
+    .pillar-card {
+        background: var(--surface);
+        padding: 2.4rem 1.9rem;
+        border-radius: var(--radius-md);
+        text-align: center;
+        transition: var(--transition);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pillar-card::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0;
+        width: 100%; height: 4px;
+        background: linear-gradient(90deg, var(--gold), var(--gold-light));
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s var(--ease);
+    }
+    .pillar-card:hover::before,
+    .pillar-card:focus-within::before { transform: scaleX(1); }
+    .pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+    .pillar-icon {
+        width: 64px; height: 64px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.9rem;
+        margin: 0 auto 1.25rem;
+        background: linear-gradient(135deg, rgba(201,169,97,0.14), rgba(201,169,97,0.04));
+        border-radius: 50%;
+    }
+    .pillar-card h3 { margin-bottom: 0.85rem; }
+    .pillar-card p { margin: 0 auto; }
+    .pillar-card.primary { border-top: 4px solid var(--gold); }
+    .pillar-card.primary::before { display: none; }
+
+    /* ============================================
+       TIMELINE
+       ============================================ */
+    .timeline-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.25rem;
+        margin-top: 1rem;
+        counter-reset: step;
+    }
+    .timeline-item { text-align: center; position: relative; }
+    .timeline-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        right: calc(-50% + 30px);
+        width: calc(100% - 60px);
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), var(--border-light));
+    }
+    .timeline-marker {
+        width: 60px; height: 60px;
+        background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+        border-radius: 50%;
+        margin: 0 auto 1.4rem;
+        display: flex; align-items: center; justify-content: center;
+        color: var(--navy);
+        font-weight: 800;
+        font-size: 1.4rem;
+        box-shadow: 0 0 0 8px rgba(201, 169, 97, 0.14);
+        position: relative;
+        z-index: 1;
+    }
+    .timeline-item h3 { margin-bottom: 0.4rem; }
+    .timeline-item p { font-size: 0.92rem; margin: 0 auto; }
+
+    @media (max-width: 780px) {
+        .timeline-grid {
+            grid-template-columns: 1fr;
+            gap: 0;
+            padding-right: 1.75rem;
+            position: relative;
+        }
+        .timeline-grid::before {
+            content: '';
+            position: absolute;
+            right: 29px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: var(--gold);
+            opacity: 0.35;
+        }
+        .timeline-item {
+            text-align: right;
+            padding: 0 0 2rem 0;
+        }
+        .timeline-item:not(:last-child)::after { display: none; }
+        .timeline-item .timeline-marker {
+            position: absolute;
+            right: 0;
+            margin: 0;
+            width: 60px; height: 60px;
+        }
+        .timeline-item h3, .timeline-item p {
+            padding-right: 4.5rem;
+        }
+    }
+
+    /* ============================================
+       FORM SECTION
+       ============================================ */
+    .form-container {
+        max-width: 680px;
+        margin: 0 auto;
+        background: var(--surface);
+        padding: clamp(2rem, 5vw, 3rem);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-light);
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+    }
+    .form-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        margin: 1.5rem 0 2rem;
+    }
+    .form-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--navy);
+        background: rgba(201, 169, 97, 0.1);
+        padding: 0.5rem 0.9rem;
+        border-radius: 2rem;
+    }
+    .form-note {
+        font-size: 0.88rem;
+        color: var(--text-light);
+        margin-top: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* ============================================
+       ACCOUNTABILITY
+       ============================================ */
+    .proposals-container { max-width: 800px; margin: 0 auto; }
+    .empty-state {
+        text-align: center;
+        padding: clamp(2.5rem, 6vw, 3.5rem) 2rem;
+        background: linear-gradient(135deg, rgba(201,169,97,0.05), transparent);
+        border-radius: var(--radius-lg);
+        border: 2px dashed var(--border-light);
+    }
+    .empty-state svg { width: 70px; height: 70px; margin: 0 auto 1.25rem; opacity: 0.45; color: var(--gold-dark); }
+    .empty-state h3 { margin-bottom: 0.5rem; }
+    .empty-state p { margin: 0 auto; }
+
+    /* ============================================
+       CLOSING
+       ============================================ */
+    .closing {
+        background: linear-gradient(150deg, var(--navy) 0%, var(--navy-3) 100%);
+        color: var(--off-white);
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .closing .quote {
+        font-size: clamp(1.2rem, 4vw, 1.7rem);
+        font-weight: 600;
+        line-height: 1.6;
+        margin-bottom: 1.4rem;
+        color: var(--off-white);
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .closing .quote.gold { color: var(--gold); font-size: clamp(1.4rem, 5vw, 2rem); font-weight: 700; }
+    .closing .description {
+        max-width: 680px;
+        margin: 0 auto 2.75rem;
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        line-height: 1.8;
+        color: rgba(248, 247, 245, 0.8);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer {
+        background: var(--navy);
+        color: var(--off-white);
+        text-align: center;
+        padding: 2.25rem 1.5rem calc(2.25rem + var(--safe-bottom));
+        font-size: 0.9rem;
+    }
+    footer p { color: rgba(248, 247, 245, 0.65); margin-bottom: 0.4rem; max-width: none; }
+    footer strong { color: var(--off-white); }
+
+    /* ============================================
+       FLOATING ACTION BUTTON
+       ============================================ */
+    .floating-action {
+        position: fixed;
+        bottom: calc(1.5rem + var(--safe-bottom));
+        left: calc(1.5rem + var(--safe-left));
+        width: 58px; height: 58px;
+        background: var(--gold);
+        color: var(--navy);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.4rem;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(201, 169, 97, 0.4);
+        transition: var(--transition);
+        z-index: 60;
+        border: none;
+        touch-action: manipulation;
+    }
+    .floating-action:hover { transform: scale(1.08); box-shadow: 0 10px 30px rgba(201, 169, 97, 0.5); }
+    .floating-action:active { transform: scale(0.95); }
+
+    @media (max-width: 640px) {
+        .floating-action { width: 52px; height: 52px; font-size: 1.2rem; bottom: calc(1.1rem + var(--safe-bottom)); left: calc(1.1rem + var(--safe-left)); }
+    }
+
+    /* Prevent any accidental horizontal overflow */
+    .hero, section, .container, img, svg { max-width: 100vw; }
+</style>
+</head>
+<body>
+    <a href="#main" class="skip-link">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hero" class="logo">أدهم</a>
+        <ul class="nav-links">
+            <li><a href="#hero" data-nav>الرئيسية</a></li>
+            <li><a href="#about" data-nav>عني</a></li>
+            <li><a href="#pillars" data-nav>أهدافي</a></li>
+            <li><a href="#timeline" data-nav>الخطة</a></li>
+        </ul>
+        <a href="#form" class="nav-cta">شارك اقتراحك</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" data-nav>الرئيسية</a>
+        <a href="#about" data-nav>عني</a>
+        <a href="#pillars" data-nav>أهدافي</a>
+        <a href="#timeline" data-nav>الخطة</a>
+        <a href="#form" data-nav>اقتراحك</a>
+        <a href="#form" class="btn btn-large" data-nav>شارك اقتراحك الآن</a>
+    </div>
+
+    <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-orb o1" aria-hidden="true"></div>
+        <div class="hero-orb o2" aria-hidden="true"></div>
+        <div class="container">
+            <div class="subtitle">أدهم باشا</div>
+            <h1>صوتكم مش رقم.</h1>
+            <div class="supporting-text">أنا مش جاي أمثّل حالي.<br>جاي أمثّلكم.</div>
+            <p class="description">
+                أنا أدهم باشا، طالب جديد في الصف الحادي عشر "أ". صوتكم بستاهل نسمعه ونمثّله ونتابعه.
+                إذا لسا عندكم اقتراحات أو مشاكل ما حدا اسمعها، أنا هان لأسمعها وأشتغل عليها معكم.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn btn-large" onclick="scrollToSection('about')">تعرّفوا عليّ</button>
+                <button class="btn btn-large btn-secondary" onclick="scrollToSection('form')">احكولي شو بدكم يتغيّر</button>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about reveal">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">تعرّف عليّ</div>
+                <h2>مين أدهم؟</h2>
+            </div>
+            <div class="content">
+                <p>
+                    أنا أدهم باشا، طالب جديد في الصف الحادي عشر قسم "أ" في مدرسة دبورية الثانوية.
+                    بركض للرئاسة لأني بصراحة بعتقد إن طلاب المدرسة بستحقو حدا يسمعهم بشكل حقيقي.
+                </p>
+                <p>
+                    ما بدّي أقول لكم إني بنقذ المدرسة أو بحقق المستحيل. بس بدّي أقول إني بشتغل بجد،
+                    بسمع احتياجاتكم، وبرجع اخبركم بصراحة: شو تم قبوله، شو تم رفضه، وليش.
+                </p>
+                <div class="highlight">
+                    <strong>أنا مش بس رقم في مجلس الطلاب. أنا تمثيل حقيقي لصوتكم.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars -->
+    <section id="pillars" class="pillars alt-bg reveal">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">ركائز الحملة</div>
+                <h2>أهداف حملتي</h2>
+                <p>
+                    حملتي مبنية على ثلاث ركائز أساسية. ما بدّي اقول لكم إن هاي الأمور سهلة،
+                    بس أنا التزمت إني اشتغل عليها بجهد.
+                </p>
+            </div>
+            <div class="pillars-grid reveal-group">
+                <div class="pillar-card">
+                    <span class="pillar-icon" aria-hidden="true">👂</span>
+                    <h3>الاستماع</h3>
+                    <p>
+                        بدّي أسمع آرائكم بشكل حقيقي. ما حدا بستحق يحس إن صوته ما حدا سمعه.
+                        أول خطوة إلي إني أعطيكم طريقة واضحة تقدّرو تعطولي اقتراحاتكم.
+                    </p>
+                </div>
+                <div class="pillar-card">
+                    <span class="pillar-icon" aria-hidden="true">📋</span>
+                    <h3>دراسة الاقتراح</h3>
+                    <p>
+                        بعد ما أسمع آرائكم، بحول الاقتراحات لمطالب منظّمة وواضحة.
+                        هاي المطالب بتروح للإدارة بطريقة احترافية وجادة.
+                    </p>
+                </div>
+                <div class="pillar-card primary">
+                    <span class="pillar-icon" aria-hidden="true">✅</span>
+                    <h3>المتابعة</h3>
+                    <p>
+                        أهم اشي: بعد ما أطرح الاقتراح، بخبركم شو صار. انقبل؟ انرفض؟
+                        بحاجة تعديلات؟ الكو الحق تعرفو.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="timeline reveal">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">خطة العمل</div>
+                <h2>خطة أول 30 يوم</h2>
+                <p>
+                    هاي مش وعود فارغة. هاي خطة عملية بنفذها بالأيام الأولى عشان اثبت إني متخذ هاي المسؤولية على محمل الجد.
+                </p>
+            </div>
+
+            <div class="timeline-grid reveal-group">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <h3>الأسبوع الأول</h3>
+                    <p><strong>نسمعكم</strong><br>جمع الاقتراحات والمشاكل والأفكار المتكررة من الطلاب.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <h3>الأسبوع الثاني والثالث</h3>
+                    <p><strong>نرتّب الأولويات</strong><br>تنظيم الاقتراحات وتحديد الأولويات والاقتراحات القابلة للتطبيق.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <h3>بعد 30 يوم</h3>
+                    <p><strong>نرجعلكم بالنتائج</strong><br>إخباركم بما تم عرضه، وافقت عليه الإدارة، وسبب اللي ما تم قبوله.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section id="form" class="form-section alt-bg reveal">
+        <div class="container">
+            <div class="form-container">
+                <div class="eyebrow" style="justify-content:center;">شاركنا رأيك</div>
+                <h2>صوتك بفرق</h2>
+                <p>
+                    عندك اقتراح أو شكوى أو فكرة؟ هان بتقدر تحكي. كل اقتراح مهم إلي وللكل،
+                    وبشتغل عليه مع الإدارة.
+                </p>
+
+                <div class="form-badges">
+                    <span class="form-badge">🔒 سرّي بالكامل</span>
+                    <span class="form-badge">✍️ التوقيع اختياري</span>
+                    <span class="form-badge">⏱️ دقيقتين بس</span>
+                </div>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlvioFRyWNptD4Awq8KnPrHvUWk0CSjQucIG6Y4nSAd7X3CQ/viewform?usp=header"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-large">
+                    افتح نموذج الاقتراحات ↗
+                </a>
+
+                <p class="form-note">
+                    <strong>ملاحظة خصوصية:</strong> اقتراحاتك بتُحفظ بسرية. لا ترسل معلومات شخصية حساسة.
+                    اقتراحاتك الجيدة بتُنشر (بدون اسمك إذا بتحب)، بس المعلومات الشخصية بتفضل خاصة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accountability -->
+    <section id="accountability" class="accountability reveal">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">المساءلة</div>
+                <h2>الثقة مش إشي بنطلبه وبننساه</h2>
+                <p>
+                    بدّي تقدرو تراقبو الاقتراحات اللي طرحتوها وتشوفو وين وصلت.
+                    هاي القائمة بتتحدّث باستمرار مع أي اقتراح جديد.
+                </p>
+            </div>
+
+            <div class="proposals-container">
+                <div class="empty-state">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/>
+                    </svg>
+                    <h3>لا توجد اقتراحات بعد</h3>
+                    <p>
+                        بعد ما نبدأ نقبل الاقتراحات، بنحدّث القائمة بكل اقتراح وحالته.
+                        كون الاقتراح الأول! 👆
+                    </p>
+                </div>
+                <div id="proposalsList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing -->
+    <section id="closing" class="closing reveal">
+        <div class="container">
+            <div class="quote">"أنا ما رح أوعدكم بالمستحيل."</div>
+            <div class="quote">"مش كل شيء رح نقدر نحققه، بس كل اقتراح بستاهل نسمعه ونتابعه."</div>
+            <div class="quote gold">"صوتكم مش رقم."</div>
+            <div class="quote gold">"صوتكم هو المسؤولية اللي باخذها معي للمجلس."</div>
+
+            <p class="description">
+                خلينا نشتغل على مدرستنا عشان تكون أفضل بيئة إلنا،
+                وتكون المكان اللي كلّنا بنحب نكون فيه ونصنع ذكريات تضل معنا طول العمر.
+            </p>
+
+            <button class="btn btn-large" onclick="scrollToSection('form')">شاركوا اقتراحاتكم</button>
+        </div>
+    </section>
+    </main>
+
+    <button class="floating-action" onclick="scrollToSection('form')" aria-label="شارك اقتراحك">✉️</button>
+
+    <footer>
+        <p><strong>أدهم باشا</strong> | مرشح رئاسة مجلس الطلاب</p>
+        <p>مدرسة دبورية الثانوية | الصف الحادي عشر أ</p>
+        <p style="margin-top: 0.75rem; font-size: 0.85rem;">صوتكم مش رقم. صوتكم مسؤولية.</p>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // ---------- Smooth scroll with header offset ----------
+        function scrollToSection(id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        window.scrollToSection = scrollToSection;
+
+        document.querySelectorAll('a[data-nav]').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                var href = a.getAttribute('href');
+                if (href && href.charAt(0) === '#') {
+                    e.preventDefault();
+                    closeMenu();
+                    scrollToSection(href.substring(1));
+                }
+            });
+        });
+
+        // ---------- Mobile menu ----------
+        var toggle = document.getElementById('menuToggle');
+        var menu = document.getElementById('mobileMenu');
+
+        function openMenu() {
+            menu.classList.add('open');
+            toggle.setAttribute('aria-expanded', 'true');
+            toggle.setAttribute('aria-label', 'إغلاق القائمة');
+            document.body.classList.add('menu-open');
+        }
+        function closeMenu() {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'فتح القائمة');
+            document.body.classList.remove('menu-open');
+        }
+        toggle.addEventListener('click', function () {
+            var isOpen = menu.classList.contains('open');
+            if (isOpen) { closeMenu(); } else { openMenu(); }
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && menu.classList.contains('open')) {
+                closeMenu();
+                toggle.focus();
+            }
+        });
+
+        // ---------- Reveal on scroll (IntersectionObserver) ----------
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) {
+                observer.observe(el);
+            });
+        } else {
+            document.querySelectorAll('.reveal, .reveal-group').forEach(function (el) {
+                el.classList.add('active');
+            });
+        }
+
+        // ---------- Active nav link on scroll ----------
+        var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+        var navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+
+        function setActiveLink() {
+            var scrollPos = window.scrollY + window.innerHeight * 0.35;
+            var currentId = sections.length ? sections[0].id : null;
+            sections.forEach(function (sec) {
+                if (sec.offsetTop <= scrollPos) currentId = sec.id;
+            });
+            navLinks.forEach(function (link) {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+            });
+        }
+
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    setActiveLink();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        setActiveLink();
+    })();
+    </script>
+</body>
+</html>
